@@ -1,0 +1,217 @@
+package pomScripts;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class productDetailsPage {
+
+	WebDriver driver;
+	WebDriverWait wait;
+
+	public productDetailsPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+	}
+
+	@FindBy(xpath = "//div[@class='product__title']")
+	private WebElement productTitlePDP;
+
+	public WebElement getProductTitle() {
+		return productTitlePDP;
+	}
+
+	public void setProductTitle(WebElement productTitle) {
+		this.productTitlePDP = productTitle;
+	}
+
+	@FindBy(xpath = "//a[text()='View Products']")
+	private WebElement viewAllProductsLink;
+
+	@FindBy(xpath = "(//a[text()='view products'])[1]")
+	private WebElement viewBundleProductsLink;
+	@FindBy(xpath = "//input[@id='pincode']")
+	private WebElement pincodeTextField;
+	@FindBy(xpath = "//button[@class='submit-pincode-button']")
+	private WebElement checkButton;
+	@FindBy(xpath = "//p[text()='Please enter a valid pincode']")
+	private WebElement invalidPincodeErrorMessage;
+	@FindBy(xpath = "//p[@id='order-timeline']")
+	private WebElement validPincodeErrorMessage;
+	@FindBy(xpath = "(//div[@class='product-form__buttons'])[1]")
+	private WebElement addToCartButton;
+	@FindBy(xpath = "(//quantity-input[@class='quantity cart-quantity pdp-quantity ']//button[@type='button'])[1]")
+	private WebElement quantityMinusButton;
+	@FindBy(xpath = "//div[@class='pdp-quantity-selector product-form__input product-form__quantity']//button[@name='plus']")
+	private WebElement quantityPlusButton;
+
+	public WebElement getProductTitlePDP() {
+		return productTitlePDP;
+	}
+
+	public void setProductTitlePDP(WebElement productTitlePDP) {
+		this.productTitlePDP = productTitlePDP;
+	}
+
+	public WebElement getViewAllProductsLink() {
+		return viewAllProductsLink;
+	}
+
+	public void setViewAllProductsLink(WebElement viewAllProductsLink) {
+		this.viewAllProductsLink = viewAllProductsLink;
+	}
+
+	public WebElement getViewBundleProductsLink() {
+		return viewBundleProductsLink;
+	}
+
+	public void setViewBundleProductsLink(WebElement viewBundleProductsLink) {
+		this.viewBundleProductsLink = viewBundleProductsLink;
+	}
+
+	public WebElement getPincodeTextField() {
+		return pincodeTextField;
+	}
+
+	public void setPincodeTextField(WebElement pincodeTextField) {
+		this.pincodeTextField = pincodeTextField;
+	}
+
+	public WebElement getCheckButton() {
+		return checkButton;
+	}
+
+	public void setCheckButton(WebElement checkButton) {
+		this.checkButton = checkButton;
+	}
+
+	public WebElement getInvalidPincodeErrorMessage() {
+		return invalidPincodeErrorMessage;
+	}
+
+	public void setInvalidPincodeErrorMessage(WebElement invalidPincodeErrorMessage) {
+		this.invalidPincodeErrorMessage = invalidPincodeErrorMessage;
+	}
+
+	public WebElement getValidPincodeErrorMessage() {
+		return validPincodeErrorMessage;
+	}
+
+	public void setValidPincodeErrorMessage(WebElement validPincodeErrorMessage) {
+		this.validPincodeErrorMessage = validPincodeErrorMessage;
+	}
+
+	public WebElement getAddToCartButton() {
+		return addToCartButton;
+	}
+
+	public void setAddToCartButton(WebElement addToCartButton) {
+		this.addToCartButton = addToCartButton;
+	}
+
+	public WebElement getQuantityMinusButton() {
+		return quantityMinusButton;
+	}
+
+	public void setQuantityMinusButton(WebElement quantityMinusButton) {
+		this.quantityMinusButton = quantityMinusButton;
+	}
+
+	public WebElement getQuantityPlusButton() {
+		return quantityPlusButton;
+	}
+
+	public void setQuantityPlusButton(WebElement quantityPlusButton) {
+		this.quantityPlusButton = quantityPlusButton;
+	}
+
+	@FindBy(xpath = "//button[@id='view-cart-drawer']")
+	private WebElement viewCartDrawerButton;
+
+	public WebElement getViewCartDrawerButton() {
+		return viewCartDrawerButton;
+	}
+
+	public void setViewCartDrawerButton(WebElement viewCartDrawerButton) {
+		this.viewCartDrawerButton = viewCartDrawerButton;
+	}
+
+	@FindBy(xpath = "(//input[@type='number'])[4]")
+	private WebElement quantityTextField;
+
+	public WebElement getQuantityTextField() {
+		return quantityTextField;
+	}
+
+	public void setQuantityTextField(WebElement quantityTextField) {
+		this.quantityTextField = quantityTextField;
+	}
+	@FindBy(xpath = "//div[@class='yotpo-main-layout yotpo-main-reviews-widget yotpo-main-widget-layout-reviews']")
+	private WebElement reviewSection;
+	@FindBy(xpath = "//section[@class='pdp-details-sec']")
+	private WebElement detailsTab;
+	@FindBy(xpath = "//div[@class='shopify-block shopify-app-block']")
+	private WebElement reelSection;
+	@FindBy(xpath = "//section[@class='pdp-collection rekated_product ymal']")
+	private WebElement youMayAlsoLikeSection;
+
+	public WebElement getReviewSection() {
+		return reviewSection;
+	}
+
+	public void setReviewSection(WebElement reviewSection) {
+		this.reviewSection = reviewSection;
+	}
+
+	public WebElement getDetailsTab() {
+		return detailsTab;
+	}
+
+	public void setDetailsTab(WebElement detailsTab) {
+		this.detailsTab = detailsTab;
+	}
+
+	public WebElement getReelSection() {
+		return reelSection;
+	}
+
+	public void setReelSection(WebElement reelSection) {
+		this.reelSection = reelSection;
+	}
+
+	public WebElement getYouMayAlsoLikeSection() {
+		return youMayAlsoLikeSection;
+	}
+
+	public void setYouMayAlsoLikeSection(WebElement youMayAlsoLikeSection) {
+		this.youMayAlsoLikeSection = youMayAlsoLikeSection;
+	}
+	
+	@FindBy(xpath = "(//div[@class='product-form__buttons'])[5]")
+	private WebElement addToCart2;
+
+	public WebElement getAddToCart2() {
+		return addToCart2;
+	}
+
+	public void setAddToCart2(WebElement addToCart2) {
+		this.addToCart2 = addToCart2;
+	}
+	@FindBy(xpath = "(//span[@class='pro-variant-price'])[1]")
+	private WebElement productPrice;
+
+	public WebElement getProductPrice() {
+		return productPrice;
+	}
+
+	public void setProductPrice(WebElement productPrice) {
+		this.productPrice = productPrice;
+	}
+	
+}
