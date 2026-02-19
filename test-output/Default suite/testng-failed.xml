@@ -6,9 +6,10 @@
       <class name="Tests.CartTest">
         <methods>
           <include name="launchApplication"/>
-          <include name="priceUpdate"/>
           <include name="teardown"/>
+          <include name="freeBieProduct"/>
           <include name="addToCartFromPDP"/>
+          <include name="checkout"/>
         </methods>
       </class> <!-- Tests.CartTest -->
     </classes>

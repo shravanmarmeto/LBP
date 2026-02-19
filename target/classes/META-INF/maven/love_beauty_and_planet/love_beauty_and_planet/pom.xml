@@ -105,10 +105,14 @@
 			<artifactId>javafaker</artifactId>
 			<version>1.0.2</version>
 		</dependency>
+		<!-- Source:
+		https://mvnrepository.com/artifact/com.browserstack/browserstack-local-java -->
+
 
 	</dependencies>
 
 	<build>
+
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven
 			defaults (may be moved to parent pom) -->
 			<plugins>

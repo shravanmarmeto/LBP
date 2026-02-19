@@ -142,7 +142,7 @@ public class productDetailsPage {
 		this.viewCartDrawerButton = viewCartDrawerButton;
 	}
 
-	@FindBy(xpath = "(//input[@type='number'])[4]")
+	@FindBy(xpath = "(//input[@class='quantity__input'])[1]")
 	private WebElement quantityTextField;
 
 	public WebElement getQuantityTextField() {

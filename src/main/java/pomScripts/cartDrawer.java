@@ -78,13 +78,13 @@ public class cartDrawer {
 	private WebElement plusButton;
 	@FindBy(xpath = "//div[@class='quantity-popover-container']//button[@name='minus']")
 	private WebElement minusButton;
-	@FindBy(xpath = "//button[@class='button button--tertiary cart-remove-button']")
+	@FindBy(xpath = "//cart-remove-button[@id='CartDrawer-Remove-1']")
 	private WebElement deleteButton;
 	@FindBy(xpath = "//p[@class='totals__total-value']")
 	private WebElement totalPrice;
 	@FindBy(xpath = "//div[@class='freebie-text']")
 	private WebElement freeBieproduct;
-	@FindBy(xpath = "//iframe[@id='gokwik-iframe']")
+	@FindBy(xpath = "//div[@class='gokwik-modal gokwik-modal-content']")
 	private WebElement gokwikPopup;
 	@FindBy(xpath = "//h2[@class='cart__empty-text']")
 	private WebElement emptycartText;
@@ -165,6 +165,16 @@ public class cartDrawer {
 		this.productPrice = productPrice;
 	}
 	
+	@FindBy(xpath = "//div[@aria-label='Your cart']")
+	private WebElement scroll;
+
+	public WebElement getScroll() {
+		return scroll;
+	}
+
+	public void setScroll(WebElement scroll) {
+		this.scroll = scroll;
+	}
 	
 	
 }

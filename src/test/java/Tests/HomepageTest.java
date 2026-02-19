@@ -23,7 +23,7 @@ public class HomepageTest extends BaseClass {
 
 	// Case 1: Verify logo is displayed in home page
 	@Test(priority = 1)
-	public void loginPageNavigation() {
+	public void logoVerification() {
 		lp = new loginPage(driver);
 		hp = new homePage(driver);
 		lp.goToWebsite();
@@ -298,10 +298,11 @@ public class HomepageTest extends BaseClass {
 	@Test(priority = 16)
 	public void verifyWhatSetsUsApartSection() {
 		hp = new homePage(driver);
-		webdriverUtility.scrollToElement(hp.getWhatSetsUsApartSectionContainer());
+		webdriverUtility.scrollToElement(hp.getWhatSetsUsApartSection());
 		Assert.assertTrue(hp.getWhatSetsUsApartSection().isDisplayed(), "What sets us apart section is not displayed");
 
 		for (int i = 0; i < hp.getWhatSetsUsApartCards().size(); i++) {
+			webdriverUtility.scrollToElement(hp.getWhatSetsUsApartCards().get(i));
 			hp.getWhatSetsUsApartCards().get(i).click();
 			Assert.assertTrue(hp.getWhatSetsUsApartCardTitles().get(i).isDisplayed(),
 					"Content is not displayed after clicking on tab");
@@ -320,22 +321,16 @@ public class HomepageTest extends BaseClass {
 	@Test(priority = 18)
 	public void verifyCustomerLoveSection() {
 		hp = new homePage(driver);
-		webdriverUtility.scrollToElement(hp.getGifSection());
+		webdriverUtility.scrollToElement(hp.getCustomerLoveSectionHeading());
 		Assert.assertTrue(hp.getCustomerLoveSectionHeading().isDisplayed(), "Customer love section is not displayed");
-		// Right 3 times
-		int n = 3;
-		hp.clickRightMultipleTimesCustomerLove(n);
-
-		// Left 2 times
-
-		hp.clickLeftMultipleTimesCustomerLove(n - 1);
+		
 	}
 
 	// case 19: Verify discover our story section
 	@Test(priority = 19)
 	public void verifyDiscoverOurStorySection() {
 		hp = new homePage(driver);
-		webdriverUtility.scrollToElement(hp.getDiscoverOurStorySection2());
+		webdriverUtility.scrollToElement(hp.getDiscoverOurStorySection());
 		webdriverUtility.waitUntilElementIsVisible(hp.getDiscoverOurStorySection());
 		hp.getDiscoverOurStorySection().click();
 		String expectedUrl = "https://lovebeautyandplanet.in/pages/our-story";

@@ -13,10 +13,12 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
@@ -48,9 +50,14 @@ public class BaseClass {
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
 		}
+		else if (browser.equalsIgnoreCase("edge")) {
+			driver = new EdgeDriver();
+		}
+		
 		driver.manage().window().maximize();
 		//driver.manage().window().setSize(new Dimension(1920, 1080));// (1440, 990)
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().deleteAllCookies();
 		return driver;
 	}
 
@@ -64,6 +71,7 @@ public class BaseClass {
 
 	@BeforeClass(alwaysRun = true)
 	public loginPage launchApplication() throws Exception {
+	
 		driver = initializeDriver();
 		lp = new loginPage(driver);
 		lp.goToWebsite();
@@ -73,7 +81,7 @@ public class BaseClass {
 
 	@AfterClass(alwaysRun = true)
 	public void teardown() {
-		//driver.close();
+		driver.quit();
 	}
 }
 
