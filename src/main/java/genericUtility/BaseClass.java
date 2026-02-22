@@ -42,8 +42,11 @@ public class BaseClass {
 		if (browser.contains("chrome")) { //contains for headless
 			ChromeOptions option = new ChromeOptions();
 			if (browser.contains("headless")) {
-				option.addArguments("headless");
-			} 
+				option.addArguments("--headless=new");
+				option.addArguments("--no-sandbox");
+				option.addArguments("--disable-dev-shm-usage");
+				option.addArguments("--window-size=1920,1080");
+				option.addArguments("--disable-gpu");			} 
 			option.addArguments("--disable-notifications");
 			driver = new ChromeDriver(option);
 
