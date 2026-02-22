@@ -34,7 +34,7 @@ public class CartTest extends BaseClass {
 		hp.getCartLink().click();
 		cartDrawer c = new cartDrawer(driver);
 		c.getContinueShopping().click();
-		String expected = "https://lovebeautyandplanet.in/collections/al";
+		String expected = "https://lovebeautyandplanet.in/collections/all";
 		String actual = driver.getCurrentUrl();
 		Assert.assertEquals(expected, actual, "user fails to redirect to collections page");
 
