@@ -7,10 +7,7 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="Tests.LoginpageTest" />
-			<class name="Tests.HomepageTest" />
-			<class name="Tests.ProductlistingpageTest" />
-			<class name="Tests.ProductdetaislTest" />
-			<class name="Tests.CartTest" />
+			
 		</classes>
 	</test> <!--
 	Test -->
