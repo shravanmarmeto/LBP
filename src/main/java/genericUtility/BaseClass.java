@@ -46,7 +46,10 @@ public class BaseClass {
 				option.addArguments("--no-sandbox");
 				option.addArguments("--disable-dev-shm-usage");
 				option.addArguments("--window-size=1920,1080");
-				option.addArguments("--disable-gpu");			} 
+				option.addArguments("--disable-gpu");		
+			    option.addArguments("--disable-dev-shm-usage");
+			    option.addArguments("--force-device-scale-factor=1");
+} 
 			option.addArguments("--disable-notifications");
 			driver = new ChromeDriver(option);
 
