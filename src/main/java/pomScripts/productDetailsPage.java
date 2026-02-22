@@ -203,7 +203,7 @@ public class productDetailsPage {
 	public void setAddToCart2(WebElement addToCart2) {
 		this.addToCart2 = addToCart2;
 	}
-	@FindBy(xpath = "(//span[@class='pro-variant-price'])[1]")
+	@FindBy(xpath = "//div[@class='sing-product-variant']//span[@class='pro-variant-price']")
 	private WebElement productPrice;
 
 	public WebElement getProductPrice() {

@@ -34,11 +34,14 @@ public class CartTest extends BaseClass {
 		hp.getCartLink().click();
 		cartDrawer c = new cartDrawer(driver);
 		c.getContinueShopping().click();
-		String expected = "https://lovebeautyandplanet.in/collections/all";
+		String expected = "https://lovebeautyandplanet.in/collections/al";
 		String actual = driver.getCurrentUrl();
 		Assert.assertEquals(expected, actual, "user fails to redirect to collections page");
 
 	}
+
+	String product1price;
+	String product2price;
 
 	// case 2: Verify if user is able to add multiple product to cart from PDP page
 	@Test(priority = 2)
@@ -59,6 +62,7 @@ public class CartTest extends BaseClass {
 			}
 		}
 		pdp = new productDetailsPage(driver);
+		product1price = pdp.getProductPrice().getText();
 		webdriverUtility.scrollToElement(pdp.getAddToCartButton());
 		pdp.getAddToCartButton().click();
 		cartDrawer c = new cartDrawer(driver);
@@ -82,6 +86,7 @@ public class CartTest extends BaseClass {
 			}
 		}
 		pdp = new productDetailsPage(driver);
+		product2price = pdp.getProductPrice().getText();
 		webdriverUtility.waitUntilElementIsVisible(pdp.getProductTitle());
 		webdriverUtility.scrollToElement(pdp.getAddToCart2());
 		pdp.getAddToCart2().click();
@@ -89,39 +94,17 @@ public class CartTest extends BaseClass {
 		String cartPro1 = c.getProductTitleCartDrawer().getText();
 		Assert.assertEquals(cartPro1.toLowerCase(), product2.toLowerCase(),
 				"Product in cart drawer is not same as the one added to cart");
-		// c.getCloseCartDrawerButton().click();
-		// driver.get("https://lovebeautyandplanet.in/cart/clear");
 	}
 
 	// Case3: Verify if cart price updates when user adds multiple quantity to cart
-	// @Test(priority = 3)
-	public void priceUpdate() throws InterruptedException {
-		lp = new loginPage(driver);
-		hp = new homePage(driver);
-		hp.getSearchTextField().click();
-		webdriverUtility.waitUntilElementIsVisible(hp.getSearchTextField());
-		hp.getSearchTextField().sendKeys("hair");
-		hp.getSearchButton().click();
-		plp = new productListingPage(driver);
-		String product = "Onion, Black Seed Oil & Patchouli Hair Mask";
-		for (WebElement ele : plp.getProductLinksSearchPLP()) {
-			if (ele.getText().equalsIgnoreCase(product)) {
-				ele.click();
-				break;
-			}
-		}
-		pdp = new productDetailsPage(driver);
-		webdriverUtility.scrollToElement(pdp.getAddToCartButton());
-		pdp.getAddToCartButton().click();
+	@Test(priority = 3)
+	public void priceUpdateVerification() throws InterruptedException {
 		cartDrawer c = new cartDrawer(driver);
-		webdriverUtility.waitUntilElementIsVisible(c.getCheckoutButtonCartDrawer());
-		String price = c.getProductPrice().getText();
-		c.getPlusButton().click();
-		webdriverUtility.waitUntilElementIsVisible(c.getCheckoutButtonCartDrawer());
-		String cartQuantity = c.getQuantityTextFieldCartDrawer().getAttribute("value");
-		int updatedValue = Integer.parseInt(price) * Integer.parseInt(cartQuantity);
-		Assert.assertEquals(c.getTotalPrice(), String.valueOf(updatedValue));
-		// driver.get("https://lovebeautyandplanet.in/cart/clear");
+		String price = c.getTotalPrice().getText();
+		String sumof2products = "₹" + String.valueOf(Integer.parseInt(product1price) + Integer.parseInt(product2price));
+		Assert.assertEquals(price, sumof2products,
+				"Total price is not updated correctly when user adds multiple product to cart");
+		Thread.sleep(2000);
 
 	}
 
@@ -139,10 +122,8 @@ public class CartTest extends BaseClass {
 	@Test(priority = 5, dependsOnMethods = "freeBieProduct")
 	public void checkout() {
 		cartDrawer c = new cartDrawer(driver);
-		// webdriverUtility.waitUntilElementIsVisible(c.getCheckoutButtonCartDrawer());
 		c.getCheckoutButtonCartDrawer().click();
 		webdriverUtility.waitUntilElementIsVisible(c.getGokwikPopup());
-		// driver.switchTo().frame(c.getGokwikPopup());
 		Assert.assertTrue(c.getGokwikPopup().isDisplayed(), "User is unable to navigate to checkout page");
 		driver.navigate().refresh();
 		driver.get("https://lovebeautyandplanet.in/cart/clear");
