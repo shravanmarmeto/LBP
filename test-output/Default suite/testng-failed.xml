@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Tests.CartTest">
+      <class name="Tests.PLP_PDP_CART">
         <methods>
           <include name="launchApplication"/>
           <include name="teardown"/>
           <include name="emptyCart"/>
         </methods>
-      </class> <!-- Tests.CartTest -->
+      </class> <!-- Tests.PLP_PDP_CART -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

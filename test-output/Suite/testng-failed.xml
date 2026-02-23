@@ -6,25 +6,20 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Tests.ProductdetaislTest">
+      <class name="Tests.ProductlistingpageTest">
         <methods>
           <include name="launchApplication"/>
-          <include name="quantityDecrease"/>
           <include name="teardown"/>
-          <include name="quantityIncrease"/>
+          <include name="appliedFilters"/>
         </methods>
-      </class> <!-- Tests.ProductdetaislTest -->
-      <class name="Tests.CartTest">
+      </class> <!-- Tests.ProductlistingpageTest -->
+      <class name="Tests.HomepageTest">
         <methods>
-          <include name="priceUpdateVerification"/>
           <include name="launchApplication"/>
           <include name="teardown"/>
-          <include name="freeBieProduct"/>
-          <include name="emptyCart"/>
-          <include name="addToCartFromPDP"/>
-          <include name="checkout"/>
+          <include name="verifyNewsletterSubscription"/>
         </methods>
-      </class> <!-- Tests.CartTest -->
+      </class> <!-- Tests.HomepageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
