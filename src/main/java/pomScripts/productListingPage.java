@@ -1,15 +1,20 @@
 package pomScripts;
 
 import java.time.Duration;
+import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class productListingPage {
+import genericUtility.BaseClass;
+import genericUtility.webdriverUtility;
+
+public class productListingPage extends BaseClass {
 
 	WebDriver driver;
 	WebDriverWait wait;
@@ -20,7 +25,7 @@ public class productListingPage {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 	}
-	
+
 	@FindBy(xpath = "//span[@class='facet-checkbox__text']")
 	private List<WebElement> allFilters;
 
@@ -31,7 +36,7 @@ public class productListingPage {
 	public void setAllFilters(List<WebElement> allFilters) {
 		this.allFilters = allFilters;
 	}
-	
+
 	@FindBy(xpath = "//b[@id='verticalTitle']")
 	private WebElement filterHeading;
 	@FindBy(xpath = "//a[@class='active-facets__button active-facets__button--light']")
@@ -62,6 +67,7 @@ public class productListingPage {
 	public void setClearAllLink(WebElement clearAllLink) {
 		this.clearAllLink = clearAllLink;
 	}
+
 	@FindBy(xpath = "//p[@class='h-pro-card-cnt-description']")
 	private List<WebElement> productTitlesPLP;
 
@@ -72,6 +78,7 @@ public class productListingPage {
 	public void setProductTitlesPLP(List<WebElement> productTitlesPLP) {
 		this.productTitlesPLP = productTitlesPLP;
 	}
+
 	@FindBy(xpath = "//button[@name='add']")
 	private List<WebElement> addToCartButtons;
 
@@ -82,7 +89,7 @@ public class productListingPage {
 	public void setAddToCartButtons(List<WebElement> addToCartButtons) {
 		this.addToCartButtons = addToCartButtons;
 	}
-	
+
 	@FindBy(xpath = "//div[@class='add-to-cart-pop']")
 	private WebElement addToCartPopup;
 	@FindBy(xpath = "//button[@id='view-cart-drawer']")
@@ -103,6 +110,7 @@ public class productListingPage {
 	public void setViewCartButton(WebElement viewCartButton) {
 		this.viewCartButton = viewCartButton;
 	}
+
 	@FindBy(xpath = "//h2[text()='you may also like']")
 	private WebElement youMayAlsoLikeSection;
 	@FindBy(xpath = "//h2[text()='Beauty Archives']")
@@ -153,8 +161,7 @@ public class productListingPage {
 	public void setWriteToUsLink(WebElement writeToUsLink) {
 		this.writeToUsLink = writeToUsLink;
 	}
-	
-	
+
 	@FindBy(xpath = "//div[@class='result-product-item-info h-pro-card-cnt']//a")
 	private List<WebElement> productLinksSearchPLP;
 
@@ -165,7 +172,91 @@ public class productListingPage {
 	public void setProductLinksSearchPLP(List<WebElement> productLinksSearchPLP) {
 		this.productLinksSearchPLP = productLinksSearchPLP;
 	}
-	
-	
-	
+
+	public void plpNavigation() {
+		lp=new loginPage(driver);
+		hp=new homePage(driver);
+		lp.goToWebsite();
+		hp.getMegamenuOffersLink().click();
+		hp.getBuy3At1399Link().click();
+	}
+
+	public void applyFilters() {
+		plp = new productListingPage(driver);
+		List<String> expectedFilters = Arrays.asList("Onion & Rosemary", "Hair Care");
+
+		int selectedCount = 0;
+
+		for (int i = 0; i < plp.getAllFilters().size(); i++) {
+
+			String filterText = plp.getAllFilters().get(i).getText();
+
+			webdriverUtility.scrollToElement(plp.getAllFilters().get(i));
+
+			if (expectedFilters.contains(filterText)) {
+
+				plp.getAllFilters().get(i).click();
+				selectedCount++;
+
+				webdriverUtility.waitForPageToLoad(driver);
+
+				if (selectedCount == expectedFilters.size()) {
+					break;
+				}
+			}
+		}
+
+	}
+
+	public String filteredProducts() {
+		plp = new productListingPage(driver);
+		WebElement firstProduct = plp.getProductTitlesPLP().get(0);
+		webdriverUtility.waitUntilElementIsVisible(firstProduct);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(firstProduct).perform();
+		webdriverUtility.waitUntilClickable(firstProduct);
+		String productTitle = firstProduct.getText();
+		firstProduct.click();
+
+		webdriverUtility.waitForPageToLoad(driver);
+		return productTitle;
+	}
+
+	public void clearFilters() throws Exception {
+		Thread.sleep(2000);
+		plp = new productListingPage(driver);
+		webdriverUtility.scrollToElement(plp.getFilterHeading());
+		plp.getClearAllLink().click();
+		webdriverUtility.waitForPageToLoad(driver);
+	}
+
+	public String addToCart() {
+		plp = new productListingPage(driver);
+		WebElement firstProduct = plp.getProductTitlesPLP().get(0);
+		webdriverUtility.waitUntilElementIsVisible(firstProduct);
+		String product = firstProduct.getText();
+		webdriverUtility.scrollToElement(plp.getProductTitlesPLP().get(0));
+		webdriverUtility.scrollToElement(plp.getAddToCartButtons().get(0));
+		plp.getAddToCartButtons().get(0).click();
+		webdriverUtility.waitUntilElementIsVisible(plp.getViewCartButton());
+		plp.getViewCartButton().click();
+		return product;
+	}
+
+	public void viewAll() {
+		webdriverUtility.scrollToElement(plp.getViewAllLink());
+		plp.getViewAllLink().click();
+		webdriverUtility.waitForPageToLoad(driver);
+	}
+
+	public void faqsSection() {
+		webdriverUtility.scrollToElement(plp.getFaqsSection());
+		webdriverUtility.waitUntilElementIsVisible(plp.getFaqsSection());
+	}
+
+	public void writeToUs() {
+		webdriverUtility.scrollToElement(plp.getWriteToUsLink());
+		plp.getWriteToUsLink().click();
+		webdriverUtility.waitForPageToLoad(driver);
+	}
 }

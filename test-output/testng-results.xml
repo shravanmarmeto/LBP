@@ -1,413 +1,273 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="55" passed="53" failed="2" skipped="0">
+<testng-results ignored="0" total="54" passed="54" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-23T00:01:13 IST" name="Suite" finished-at="2026-02-23T00:08:26 IST" duration-ms="432977">
+  <suite started-at="2026-03-10T16:59:13 IST" name="Suite" finished-at="2026-03-10T17:05:04 IST" duration-ms="350564">
     <groups>
     </groups>
-    <test started-at="2026-02-23T00:01:13 IST" name="Test" finished-at="2026-02-23T00:08:26 IST" duration-ms="432977">
+    <test started-at="2026-03-10T16:59:13 IST" name="Test" finished-at="2026-03-10T17:05:04 IST" duration-ms="350564">
       <class name="Tests.CartTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Tests.CartTest@3119cf6f]" started-at="2026-02-23T00:07:42 IST" name="launchApplication" finished-at="2026-02-23T00:07:51 IST" duration-ms="8325" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Tests.CartTest@3119cf6f]" started-at="2026-03-10T17:04:28 IST" name="launchApplication" finished-at="2026-03-10T17:04:35 IST" duration-ms="7317" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="emptyCart()[pri:1, instance:Tests.CartTest@3119cf6f]" started-at="2026-02-23T00:07:51 IST" name="emptyCart" finished-at="2026-02-23T00:07:59 IST" duration-ms="8742" status="PASS">
+        <test-method signature="emptyCart()[pri:1, instance:Tests.CartTest@3119cf6f]" started-at="2026-03-10T17:04:35 IST" name="emptyCart" finished-at="2026-03-10T17:04:42 IST" duration-ms="6534" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- emptyCart -->
-        <test-method signature="addToCartFromPDP()[pri:2, instance:Tests.CartTest@3119cf6f]" started-at="2026-02-23T00:07:59 IST" name="addToCartFromPDP" finished-at="2026-02-23T00:08:17 IST" duration-ms="17117" status="PASS">
+        <test-method signature="addToCartFromPDP()[pri:2, instance:Tests.CartTest@3119cf6f]" started-at="2026-03-10T17:04:42 IST" name="addToCartFromPDP" finished-at="2026-03-10T17:04:56 IST" duration-ms="14030" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCartFromPDP -->
-        <test-method signature="priceUpdateVerification()[pri:3, instance:Tests.CartTest@3119cf6f]" started-at="2026-02-23T00:08:17 IST" name="priceUpdateVerification" finished-at="2026-02-23T00:08:19 IST" duration-ms="2222" status="PASS">
+        <test-method signature="priceUpdateVerification()[pri:3, instance:Tests.CartTest@3119cf6f]" started-at="2026-03-10T17:04:56 IST" name="priceUpdateVerification" finished-at="2026-03-10T17:04:58 IST" duration-ms="2069" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- priceUpdateVerification -->
-        <test-method signature="freeBieProduct()[pri:4, instance:Tests.CartTest@3119cf6f]" started-at="2026-02-23T00:08:19 IST" name="freeBieProduct" finished-at="2026-02-23T00:08:19 IST" duration-ms="37" status="PASS">
+        <test-method signature="freeBieProduct()[pri:4, instance:Tests.CartTest@3119cf6f]" started-at="2026-03-10T17:04:58 IST" name="freeBieProduct" finished-at="2026-03-10T17:04:58 IST" duration-ms="81" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- freeBieProduct -->
-        <test-method signature="checkout()[pri:5, instance:Tests.CartTest@3119cf6f]" started-at="2026-02-23T00:08:19 IST" name="checkout" finished-at="2026-02-23T00:08:25 IST" depends-on-methods="Tests.CartTest.freeBieProduct" duration-ms="6402" status="PASS">
+        <test-method signature="checkout()[pri:5, instance:Tests.CartTest@3119cf6f]" started-at="2026-03-10T17:04:58 IST" name="checkout" finished-at="2026-03-10T17:05:03 IST" depends-on-methods="Tests.CartTest.freeBieProduct" duration-ms="5356" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkout -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.CartTest@3119cf6f]" started-at="2026-02-23T00:08:25 IST" name="teardown" finished-at="2026-02-23T00:08:26 IST" duration-ms="664" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.CartTest@3119cf6f]" started-at="2026-03-10T17:05:03 IST" name="teardown" finished-at="2026-03-10T17:05:04 IST" duration-ms="532" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Tests.CartTest -->
       <class name="Tests.LoginpageTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Tests.LoginpageTest@4d6ccc97]" started-at="2026-02-23T00:01:13 IST" name="launchApplication" finished-at="2026-02-23T00:01:19 IST" duration-ms="5746" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Tests.LoginpageTest@4d6ccc97]" started-at="2026-03-10T16:59:13 IST" name="launchApplication" finished-at="2026-03-10T16:59:19 IST" duration-ms="5566" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="loginPageNavigation()[pri:1, instance:Tests.LoginpageTest@4d6ccc97]" started-at="2026-02-23T00:01:19 IST" name="loginPageNavigation" finished-at="2026-02-23T00:01:24 IST" duration-ms="5624" status="PASS">
+        <test-method signature="loginPageNavigation()[pri:1, instance:Tests.LoginpageTest@4d6ccc97]" started-at="2026-03-10T16:59:19 IST" name="loginPageNavigation" finished-at="2026-03-10T16:59:25 IST" duration-ms="6150" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPageNavigation -->
-        <test-method signature="createAccount()[pri:2, instance:Tests.LoginpageTest@4d6ccc97]" started-at="2026-02-23T00:01:24 IST" name="createAccount" finished-at="2026-02-23T00:01:39 IST" duration-ms="15082" status="PASS">
+        <test-method signature="createAccount()[pri:2, instance:Tests.LoginpageTest@4d6ccc97]" started-at="2026-03-10T16:59:25 IST" name="createAccount" finished-at="2026-03-10T16:59:39 IST" duration-ms="14541" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createAccount -->
-        <test-method signature="login()[pri:3, instance:Tests.LoginpageTest@4d6ccc97]" started-at="2026-02-23T00:01:39 IST" name="login" finished-at="2026-02-23T00:01:53 IST" duration-ms="13532" status="PASS">
+        <test-method signature="login()[pri:3, instance:Tests.LoginpageTest@4d6ccc97]" started-at="2026-03-10T16:59:39 IST" name="login" finished-at="2026-03-10T16:59:53 IST" duration-ms="13395" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.LoginpageTest@4d6ccc97]" started-at="2026-02-23T00:01:53 IST" name="teardown" finished-at="2026-02-23T00:01:54 IST" duration-ms="638" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.LoginpageTest@4d6ccc97]" started-at="2026-03-10T16:59:53 IST" name="teardown" finished-at="2026-03-10T16:59:53 IST" duration-ms="476" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Tests.LoginpageTest -->
       <class name="Tests.ProductlistingpageTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Tests.ProductlistingpageTest@4a901445]" started-at="2026-02-23T00:06:15 IST" name="launchApplication" finished-at="2026-02-23T00:06:23 IST" duration-ms="8853" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-03-10T17:03:04 IST" name="launchApplication" finished-at="2026-03-10T17:03:11 IST" duration-ms="6896" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="hpToPlpNavigation()[pri:1, instance:Tests.ProductlistingpageTest@4a901445]" started-at="2026-02-23T00:06:23 IST" name="hpToPlpNavigation" finished-at="2026-02-23T00:06:29 IST" duration-ms="5649" status="PASS">
+        <test-method signature="hpToPlpNavigation()[pri:1, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-03-10T17:03:11 IST" name="hpToPlpNavigation" finished-at="2026-03-10T17:03:18 IST" duration-ms="6273" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- hpToPlpNavigation -->
-        <test-method signature="appliedFilters()[pri:2, instance:Tests.ProductlistingpageTest@4a901445]" started-at="2026-02-23T00:06:29 IST" name="appliedFilters" finished-at="2026-02-23T00:06:34 IST" duration-ms="4649" status="FAIL">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
-            <message>
-              <![CDATA[stale element reference: stale element not found in the current frame
-  (Session info: chrome=145.0.7632.109)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Build info: version: '4.39.0', revision: '126f156aee'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [863f7277cbdda100017e9517d6215243, getElementText {id=f.A26C710B67387F4642D684ED32F15C9F.d.E6AD3B2CAAD986D480D90CA65C30CFFD.e.595}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.109, chrome: {chromedriverVersion: 145.0.7632.77 (da516187054a..., userDataDir: C:\Users\OrCon\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63921}, goog:processID: 11604, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63921/devtoo..., se:cdpVersion: 145.0.7632.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (863f7277cbdda100017e9517d6215243)] -> xpath: //span[@class='facet-checkbox__text']]
-Session ID: 863f7277cbdda100017e9517d6215243]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
-  (Session info: chrome=145.0.7632.109)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Build info: version: '4.39.0', revision: '126f156aee'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [863f7277cbdda100017e9517d6215243, getElementText {id=f.A26C710B67387F4642D684ED32F15C9F.d.E6AD3B2CAAD986D480D90CA65C30CFFD.e.595}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.109, chrome: {chromedriverVersion: 145.0.7632.77 (da516187054a..., userDataDir: C:\Users\OrCon\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63921}, goog:processID: 11604, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63921/devtoo..., se:cdpVersion: 145.0.7632.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (863f7277cbdda100017e9517d6215243)] -> xpath: //span[@class='facet-checkbox__text']]
-Session ID: 863f7277cbdda100017e9517d6215243
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
-at Tests.ProductlistingpageTest.appliedFilters(ProductlistingpageTest.java:53)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+        <test-method signature="appliedFilters()[pri:2, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-03-10T17:03:18 IST" name="appliedFilters" finished-at="2026-03-10T17:03:25 IST" duration-ms="7889" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- appliedFilters -->
-        <test-method signature="relevantProdutRedirection()[pri:3, instance:Tests.ProductlistingpageTest@4a901445]" started-at="2026-02-23T00:06:34 IST" name="relevantProdutRedirection" finished-at="2026-02-23T00:06:36 IST" duration-ms="2531" status="PASS">
+        <test-method signature="filteredproducts()[pri:3, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-03-10T17:03:25 IST" name="filteredproducts" finished-at="2026-03-10T17:03:29 IST" duration-ms="3050" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- relevantProdutRedirection -->
-        <test-method signature="clearFilters()[pri:4, instance:Tests.ProductlistingpageTest@4a901445]" started-at="2026-02-23T00:06:36 IST" name="clearFilters" finished-at="2026-02-23T00:06:42 IST" duration-ms="5604" status="PASS">
+        </test-method> <!-- filteredproducts -->
+        <test-method signature="clearFilters()[pri:4, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-03-10T17:03:29 IST" name="clearFilters" finished-at="2026-03-10T17:03:33 IST" duration-ms="4303" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clearFilters -->
-        <test-method signature="addToCartFromPLP()[pri:5, instance:Tests.ProductlistingpageTest@4a901445]" started-at="2026-02-23T00:06:42 IST" name="addToCartFromPLP" finished-at="2026-02-23T00:06:49 IST" duration-ms="6649" status="PASS">
+        <test-method signature="addToCartFromPLP()[pri:5, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-03-10T17:03:33 IST" name="addToCartFromPLP" finished-at="2026-03-10T17:03:38 IST" duration-ms="5044" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCartFromPLP -->
-        <test-method signature="youMayAlsoLikeSection()[pri:6, instance:Tests.ProductlistingpageTest@4a901445]" started-at="2026-02-23T00:06:49 IST" name="youMayAlsoLikeSection" finished-at="2026-02-23T00:06:49 IST" duration-ms="631" status="PASS">
+        <test-method signature="youMayAlsoLikeSection()[pri:6, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-03-10T17:03:38 IST" name="youMayAlsoLikeSection" finished-at="2026-03-10T17:03:38 IST" duration-ms="561" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- youMayAlsoLikeSection -->
-        <test-method signature="beautyArchivesSection()[pri:7, instance:Tests.ProductlistingpageTest@4a901445]" started-at="2026-02-23T00:06:49 IST" name="beautyArchivesSection" finished-at="2026-02-23T00:06:50 IST" duration-ms="567" status="PASS">
+        <test-method signature="beautyArchivesSection()[pri:7, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-03-10T17:03:38 IST" name="beautyArchivesSection" finished-at="2026-03-10T17:03:39 IST" duration-ms="471" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beautyArchivesSection -->
-        <test-method signature="viewAllRedirection()[pri:8, instance:Tests.ProductlistingpageTest@4a901445]" started-at="2026-02-23T00:06:50 IST" name="viewAllRedirection" finished-at="2026-02-23T00:06:52 IST" duration-ms="2333" status="PASS">
+        <test-method signature="viewAllRedirection()[pri:8, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-03-10T17:03:39 IST" name="viewAllRedirection" finished-at="2026-03-10T17:03:41 IST" duration-ms="2487" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- viewAllRedirection -->
-        <test-method signature="faqsSection()[pri:9, instance:Tests.ProductlistingpageTest@4a901445]" started-at="2026-02-23T00:06:52 IST" name="faqsSection" finished-at="2026-02-23T00:06:53 IST" duration-ms="608" status="PASS">
+        <test-method signature="faqsSection()[pri:9, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-03-10T17:03:41 IST" name="faqsSection" finished-at="2026-03-10T17:03:42 IST" duration-ms="591" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- faqsSection -->
-        <test-method signature="writeToUsRedirection()[pri:10, instance:Tests.ProductlistingpageTest@4a901445]" started-at="2026-02-23T00:06:53 IST" name="writeToUsRedirection" finished-at="2026-02-23T00:06:55 IST" duration-ms="1788" status="PASS">
+        <test-method signature="writeToUsRedirection()[pri:10, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-03-10T17:03:42 IST" name="writeToUsRedirection" finished-at="2026-03-10T17:03:44 IST" duration-ms="1852" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- writeToUsRedirection -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.ProductlistingpageTest@4a901445]" started-at="2026-02-23T00:06:55 IST" name="teardown" finished-at="2026-02-23T00:06:55 IST" duration-ms="676" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.ProductlistingpageTest@2b0b7e5a]" started-at="2026-03-10T17:03:44 IST" name="teardown" finished-at="2026-03-10T17:03:44 IST" duration-ms="576" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Tests.ProductlistingpageTest -->
       <class name="Tests.ProductdetaislTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-02-23T00:06:55 IST" name="launchApplication" finished-at="2026-02-23T00:07:02 IST" duration-ms="7049" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-03-10T17:03:44 IST" name="launchApplication" finished-at="2026-03-10T17:03:50 IST" duration-ms="5726" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="hpToPlpNavigation()[pri:1, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-02-23T00:07:02 IST" name="hpToPlpNavigation" finished-at="2026-02-23T00:07:13 IST" duration-ms="10698" status="PASS">
+        <test-method signature="hpToPdpNavigation()[pri:1, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-03-10T17:03:50 IST" name="hpToPdpNavigation" finished-at="2026-03-10T17:03:59 IST" duration-ms="9256" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- hpToPlpNavigation -->
-        <test-method signature="pdpToPlpNavigation()[pri:2, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-02-23T00:07:13 IST" name="pdpToPlpNavigation" finished-at="2026-02-23T00:07:21 IST" duration-ms="7607" status="PASS">
+        </test-method> <!-- hpToPdpNavigation -->
+        <test-method signature="pdpToPlpNavigation()[pri:2, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-03-10T17:03:59 IST" name="pdpToPlpNavigation" finished-at="2026-03-10T17:04:05 IST" duration-ms="5393" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pdpToPlpNavigation -->
-        <test-method signature="invalidPincodeCheck()[pri:3, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-02-23T00:07:21 IST" name="invalidPincodeCheck" finished-at="2026-02-23T00:07:22 IST" duration-ms="1255" status="PASS">
+        <test-method signature="invalidPincodeCheck()[pri:3, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-03-10T17:04:05 IST" name="invalidPincodeCheck" finished-at="2026-03-10T17:04:06 IST" duration-ms="1650" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidPincodeCheck -->
-        <test-method signature="validPincodeCheck()[pri:4, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-02-23T00:07:22 IST" name="validPincodeCheck" finished-at="2026-02-23T00:07:23 IST" duration-ms="955" status="PASS">
+        <test-method signature="validPincodeCheck()[pri:4, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-03-10T17:04:06 IST" name="validPincodeCheck" finished-at="2026-03-10T17:04:08 IST" duration-ms="1227" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validPincodeCheck -->
-        <test-method signature="addToCartFromPDP()[pri:5, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-02-23T00:07:23 IST" name="addToCartFromPDP" finished-at="2026-02-23T00:07:25 IST" duration-ms="2429" status="PASS">
+        <test-method signature="addToCartFromPDP()[pri:5, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-03-10T17:04:08 IST" name="addToCartFromPDP" finished-at="2026-03-10T17:04:11 IST" duration-ms="2819" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCartFromPDP -->
-        <test-method signature="quantityIncrease()[pri:6, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-02-23T00:07:25 IST" name="quantityIncrease" finished-at="2026-02-23T00:07:30 IST" duration-ms="4644" status="PASS">
+        <test-method signature="quantityIncrease()[pri:6, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-03-10T17:04:11 IST" name="quantityIncrease" finished-at="2026-03-10T17:04:15 IST" duration-ms="4736" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quantityIncrease -->
-        <test-method signature="quantityDecrease()[pri:7, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-02-23T00:07:30 IST" name="quantityDecrease" finished-at="2026-02-23T00:07:35 IST" depends-on-methods="Tests.ProductdetaislTest.quantityIncrease" duration-ms="4564" status="PASS">
+        <test-method signature="quantityDecrease()[pri:7, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-03-10T17:04:15 IST" name="quantityDecrease" finished-at="2026-03-10T17:04:20 IST" depends-on-methods="Tests.ProductdetaislTest.quantityIncrease" duration-ms="4727" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quantityDecrease -->
-        <test-method signature="reviewsSection()[pri:8, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-02-23T00:07:35 IST" name="reviewsSection" finished-at="2026-02-23T00:07:37 IST" duration-ms="2369" status="PASS">
+        <test-method signature="reviewsSection()[pri:8, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-03-10T17:04:20 IST" name="reviewsSection" finished-at="2026-03-10T17:04:22 IST" duration-ms="2334" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reviewsSection -->
-        <test-method signature="detailsSection()[pri:9, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-02-23T00:07:37 IST" name="detailsSection" finished-at="2026-02-23T00:07:39 IST" duration-ms="2326" status="PASS">
+        <test-method signature="detailsSection()[pri:9, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-03-10T17:04:22 IST" name="detailsSection" finished-at="2026-03-10T17:04:25 IST" duration-ms="2355" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- detailsSection -->
-        <test-method signature="youMayAlsoLikeSectionPDP()[pri:10, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-02-23T00:07:39 IST" name="youMayAlsoLikeSectionPDP" finished-at="2026-02-23T00:07:42 IST" duration-ms="2370" status="PASS">
+        <test-method signature="youMayAlsoLikeSectionPDP()[pri:10, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-03-10T17:04:25 IST" name="youMayAlsoLikeSectionPDP" finished-at="2026-03-10T17:04:27 IST" duration-ms="2500" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- youMayAlsoLikeSectionPDP -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-02-23T00:07:42 IST" name="teardown" finished-at="2026-02-23T00:07:42 IST" duration-ms="645" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.ProductdetaislTest@7be1ce6a]" started-at="2026-03-10T17:04:27 IST" name="teardown" finished-at="2026-03-10T17:04:28 IST" duration-ms="491" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- Tests.ProductdetaislTest -->
       <class name="Tests.HomepageTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:01:54 IST" name="launchApplication" finished-at="2026-02-23T00:02:00 IST" duration-ms="6279" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T16:59:53 IST" name="launchApplication" finished-at="2026-03-10T16:59:59 IST" duration-ms="5470" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="logoVerification()[pri:1, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:02:00 IST" name="logoVerification" finished-at="2026-02-23T00:02:03 IST" duration-ms="3354" status="PASS">
+        <test-method signature="logoVerification()[pri:1, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T16:59:59 IST" name="logoVerification" finished-at="2026-03-10T17:00:02 IST" duration-ms="2836" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoVerification -->
-        <test-method signature="announcementBarNavigation()[pri:2, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:02:03 IST" name="announcementBarNavigation" finished-at="2026-02-23T00:02:10 IST" duration-ms="6560" status="PASS">
+        <test-method signature="announcementBarNavigation()[pri:2, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:00:02 IST" name="announcementBarNavigation" finished-at="2026-03-10T17:00:07 IST" duration-ms="5733" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- announcementBarNavigation -->
-        <test-method signature="megamenuNavigation()[pri:3, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:02:10 IST" name="megamenuNavigation" finished-at="2026-02-23T00:02:12 IST" duration-ms="2537" status="PASS">
+        <test-method signature="megamenuNavigation()[pri:3, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:00:07 IST" name="megamenuNavigation" finished-at="2026-03-10T17:00:10 IST" duration-ms="2255" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- megamenuNavigation -->
-        <test-method signature="aboutUsPageNavigation()[pri:4, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:02:12 IST" name="aboutUsPageNavigation" finished-at="2026-02-23T00:02:14 IST" duration-ms="1743" status="PASS">
+        <test-method signature="aboutUsPageNavigation()[pri:4, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:00:10 IST" name="aboutUsPageNavigation" finished-at="2026-03-10T17:00:11 IST" duration-ms="1838" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aboutUsPageNavigation -->
-        <test-method signature="knowYourIngredientsPageNavigation()[pri:5, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:02:14 IST" name="knowYourIngredientsPageNavigation" finished-at="2026-02-23T00:02:16 IST" duration-ms="1614" status="PASS">
+        <test-method signature="knowYourIngredientsPageNavigation()[pri:5, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:00:11 IST" name="knowYourIngredientsPageNavigation" finished-at="2026-03-10T17:00:13 IST" duration-ms="1531" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- knowYourIngredientsPageNavigation -->
-        <test-method signature="beautyArchivesPageNavigation()[pri:6, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:02:16 IST" name="beautyArchivesPageNavigation" finished-at="2026-02-23T00:02:18 IST" duration-ms="2143" status="PASS">
+        <test-method signature="beautyArchivesPageNavigation()[pri:6, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:00:13 IST" name="beautyArchivesPageNavigation" finished-at="2026-03-10T17:00:15 IST" duration-ms="2380" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beautyArchivesPageNavigation -->
-        <test-method signature="contactUsPageNavigation()[pri:7, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:02:18 IST" name="contactUsPageNavigation" finished-at="2026-02-23T00:02:20 IST" duration-ms="1526" status="PASS">
+        <test-method signature="contactUsPageNavigation()[pri:7, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:00:15 IST" name="contactUsPageNavigation" finished-at="2026-03-10T17:00:17 IST" duration-ms="1706" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- contactUsPageNavigation -->
-        <test-method signature="verifyHeroBannerNavigation()[pri:8, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:02:20 IST" name="verifyHeroBannerNavigation" finished-at="2026-02-23T00:02:21 IST" duration-ms="1743" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyHeroBannerNavigation -->
-        <test-method signature="verifyHeroBannerLinkNavigation()[pri:9, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:02:21 IST" name="verifyHeroBannerLinkNavigation" finished-at="2026-02-23T00:02:23 IST" duration-ms="1316" status="PASS">
+        <test-method signature="verifyHeroBannerLinkNavigation()[pri:8, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:00:17 IST" name="verifyHeroBannerLinkNavigation" finished-at="2026-03-10T17:00:19 IST" duration-ms="1896" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHeroBannerLinkNavigation -->
-        <test-method signature="verifyCollectionTabsNavigation()[pri:10, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:02:23 IST" name="verifyCollectionTabsNavigation" finished-at="2026-02-23T00:02:33 IST" duration-ms="10443" status="PASS">
+        <test-method signature="verifyCollectionTabsNavigation()[pri:9, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:00:19 IST" name="verifyCollectionTabsNavigation" finished-at="2026-03-10T17:00:31 IST" duration-ms="11740" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCollectionTabsNavigation -->
-        <test-method signature="verifyProductNavigationFromCollectionTab()[pri:11, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:02:33 IST" name="verifyProductNavigationFromCollectionTab" finished-at="2026-02-23T00:02:39 IST" duration-ms="5699" status="PASS">
+        <test-method signature="verifyProductNavigationFromCollectionTab()[pri:10, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:00:31 IST" name="verifyProductNavigationFromCollectionTab" finished-at="2026-03-10T17:00:36 IST" duration-ms="5497" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyProductNavigationFromCollectionTab -->
-        <test-method signature="verifyAddToCartFunctionality()[pri:12, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:02:39 IST" name="verifyAddToCartFunctionality" finished-at="2026-02-23T00:02:51 IST" duration-ms="11793" status="PASS">
+        <test-method signature="verifyAddToCartFunctionality()[pri:12, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:00:36 IST" name="verifyAddToCartFunctionality" finished-at="2026-03-10T17:00:49 IST" depends-on-methods="Tests.HomepageTest.verifyProductNavigationFromCollectionTab" duration-ms="12563" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAddToCartFunctionality -->
-        <test-method signature="verifyShopByConcernSection()[pri:13, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:02:51 IST" name="verifyShopByConcernSection" finished-at="2026-02-23T00:03:05 IST" duration-ms="14849" status="PASS">
+        <test-method signature="verifyShopByConcernSection()[pri:13, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:00:49 IST" name="verifyShopByConcernSection" finished-at="2026-03-10T17:01:02 IST" duration-ms="13619" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyShopByConcernSection -->
-        <test-method signature="verifyDiscoverBeautyBillSection()[pri:14, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:03:05 IST" name="verifyDiscoverBeautyBillSection" finished-at="2026-02-23T00:03:08 IST" duration-ms="2115" status="PASS">
+        <test-method signature="verifyDiscoverBeautyBillSection()[pri:14, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:01:02 IST" name="verifyDiscoverBeautyBillSection" finished-at="2026-03-10T17:01:04 IST" duration-ms="2066" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDiscoverBeautyBillSection -->
-        <test-method signature="verifyInTheSpotlightSection()[pri:15, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:03:08 IST" name="verifyInTheSpotlightSection" finished-at="2026-02-23T00:03:16 IST" duration-ms="8059" status="PASS">
+        <test-method signature="verifyInTheSpotlightSection()[pri:15, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:01:04 IST" name="verifyInTheSpotlightSection" finished-at="2026-03-10T17:01:14 IST" duration-ms="9586" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInTheSpotlightSection -->
-        <test-method signature="verifyWhatSetsUsApartSection()[pri:16, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:03:16 IST" name="verifyWhatSetsUsApartSection" finished-at="2026-02-23T00:03:19 IST" duration-ms="3566" status="PASS">
+        <test-method signature="verifyWhatSetsUsApartSection()[pri:16, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:01:14 IST" name="verifyWhatSetsUsApartSection" finished-at="2026-03-10T17:01:18 IST" duration-ms="4413" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyWhatSetsUsApartSection -->
-        <test-method signature="verifyReelsSection()[pri:17, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:03:19 IST" name="verifyReelsSection" finished-at="2026-02-23T00:03:20 IST" duration-ms="328" status="PASS">
+        <test-method signature="verifyReelsSection()[pri:17, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:01:18 IST" name="verifyReelsSection" finished-at="2026-03-10T17:01:19 IST" duration-ms="351" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyReelsSection -->
-        <test-method signature="verifyCustomerLoveSection()[pri:18, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:03:20 IST" name="verifyCustomerLoveSection" finished-at="2026-02-23T00:03:20 IST" duration-ms="369" status="PASS">
+        <test-method signature="verifyCustomerLoveSection()[pri:18, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:01:19 IST" name="verifyCustomerLoveSection" finished-at="2026-03-10T17:01:19 IST" duration-ms="385" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCustomerLoveSection -->
-        <test-method signature="verifyDiscoverOurStorySection()[pri:19, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:03:20 IST" name="verifyDiscoverOurStorySection" finished-at="2026-02-23T00:03:24 IST" duration-ms="4295" status="PASS">
+        <test-method signature="verifyDiscoverOurStorySection()[pri:19, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:01:19 IST" name="verifyDiscoverOurStorySection" finished-at="2026-03-10T17:01:22 IST" duration-ms="2358" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDiscoverOurStorySection -->
-        <test-method signature="verifyBeautyArchivesSection()[pri:20, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:03:24 IST" name="verifyBeautyArchivesSection" finished-at="2026-02-23T00:03:29 IST" duration-ms="4643" status="PASS">
+        <test-method signature="verifyBeautyArchivesSection()[pri:20, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:01:22 IST" name="verifyBeautyArchivesSection" finished-at="2026-03-10T17:01:27 IST" duration-ms="4990" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyBeautyArchivesSection -->
-        <test-method signature="verifyNewsletterSubscription()[pri:21, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:03:29 IST" name="verifyNewsletterSubscription" finished-at="2026-02-23T00:03:46 IST" duration-ms="17206" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //h3[@class='test newsletter-form__message newsletter-form__message--success form__message']' (tried for 10 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //h3[@class='test newsletter-form__message newsletter-form__message--success form__message']' (tried for 10 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at genericUtility.webdriverUtility.waitUntilElementIsVisible(webdriverUtility.java:412)
-at Tests.HomepageTest.verifyNewsletterSubscription(HomepageTest.java:377)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h3[@class='test newsletter-form__message newsletter-form__message--success form__message']"}
-  (Session info: chrome=145.0.7632.109)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.39.0', revision: '126f156aee'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [02bd0272dbc15e88203c1890c79ad2ab, findElement {value=//h3[@class='test newsletter-form__message newsletter-form__message--success form__message'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.109, chrome: {chromedriverVersion: 145.0.7632.77 (da516187054a..., userDataDir: C:\Users\OrCon\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61770}, goog:processID: 764, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61770/devtoo..., se:cdpVersion: 145.0.7632.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 02bd0272dbc15e88203c1890c79ad2ab
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:308)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:294)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:291)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-... 28 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="verifyNewsletterSubscription()[pri:21, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:01:27 IST" name="verifyNewsletterSubscription" finished-at="2026-03-10T17:01:39 IST" duration-ms="11962" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyNewsletterSubscription -->
-        <test-method signature="verifyFooterProductLinks()[pri:22, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:03:46 IST" name="verifyFooterProductLinks" finished-at="2026-02-23T00:04:28 IST" duration-ms="41474" status="PASS">
+        <test-method signature="verifyFooterProductLinks()[pri:22, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:01:39 IST" name="verifyFooterProductLinks" finished-at="2026-03-10T17:02:02 IST" duration-ms="23244" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFooterProductLinks -->
-        <test-method signature="verifyFooterConcernLinks()[pri:23, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:04:28 IST" name="verifyFooterConcernLinks" finished-at="2026-02-23T00:05:10 IST" duration-ms="41964" status="PASS">
+        <test-method signature="verifyFooterConcernLinks()[pri:23, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:02:02 IST" name="verifyFooterConcernLinks" finished-at="2026-03-10T17:02:23 IST" duration-ms="21290" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFooterConcernLinks -->
-        <test-method signature="verifyFooterQuickLinks()[pri:24, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:05:10 IST" name="verifyFooterQuickLinks" finished-at="2026-02-23T00:05:40 IST" duration-ms="30580" status="PASS">
+        <test-method signature="verifyFooterQuickLinks()[pri:24, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:02:23 IST" name="verifyFooterQuickLinks" finished-at="2026-03-10T17:02:38 IST" duration-ms="15057" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFooterQuickLinks -->
-        <test-method signature="verifyFooterLegalLinks()[pri:25, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:05:40 IST" name="verifyFooterLegalLinks" finished-at="2026-02-23T00:06:03 IST" duration-ms="22970" status="PASS">
+        <test-method signature="verifyFooterLegalLinks()[pri:25, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:02:38 IST" name="verifyFooterLegalLinks" finished-at="2026-03-10T17:02:52 IST" duration-ms="14277" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFooterLegalLinks -->
-        <test-method signature="verifyFooterSocialMediaLinks()[pri:26, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:06:03 IST" name="verifyFooterSocialMediaLinks" finished-at="2026-02-23T00:06:13 IST" duration-ms="9698" status="PASS">
+        <test-method signature="verifyFooterSocialMediaLinks()[pri:26, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:02:52 IST" name="verifyFooterSocialMediaLinks" finished-at="2026-03-10T17:03:03 IST" duration-ms="10603" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFooterSocialMediaLinks -->
-        <test-method signature="verifyCautionNotice()[pri:27, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:06:13 IST" name="verifyCautionNotice" finished-at="2026-02-23T00:06:14 IST" duration-ms="426" status="PASS">
+        <test-method signature="verifyCautionNotice()[pri:27, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:03:03 IST" name="verifyCautionNotice" finished-at="2026-03-10T17:03:03 IST" duration-ms="373" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCautionNotice -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.HomepageTest@5740ff5e]" started-at="2026-02-23T00:06:14 IST" name="teardown" finished-at="2026-02-23T00:06:15 IST" duration-ms="973" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.HomepageTest@67f77f6e]" started-at="2026-03-10T17:03:03 IST" name="teardown" finished-at="2026-03-10T17:03:04 IST" duration-ms="1024" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

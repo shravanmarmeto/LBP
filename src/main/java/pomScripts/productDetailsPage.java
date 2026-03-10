@@ -8,10 +8,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import genericUtility.webdriverUtility;
+
 public class productDetailsPage {
 
 	WebDriver driver;
 	WebDriverWait wait;
+	loginPage lp;
+	homePage hp;
+	productListingPage plp;
 
 	public productDetailsPage(WebDriver driver) {
 		this.driver = driver;
@@ -152,6 +157,7 @@ public class productDetailsPage {
 	public void setQuantityTextField(WebElement quantityTextField) {
 		this.quantityTextField = quantityTextField;
 	}
+
 	@FindBy(xpath = "//div[@class='yotpo-main-layout yotpo-main-reviews-widget yotpo-main-widget-layout-reviews']")
 	private WebElement reviewSection;
 	@FindBy(xpath = "//section[@class='pdp-details-sec']")
@@ -192,7 +198,7 @@ public class productDetailsPage {
 	public void setYouMayAlsoLikeSection(WebElement youMayAlsoLikeSection) {
 		this.youMayAlsoLikeSection = youMayAlsoLikeSection;
 	}
-	
+
 	@FindBy(xpath = "(//div[@class='product-form__buttons'])[5]")
 	private WebElement addToCart2;
 
@@ -203,6 +209,7 @@ public class productDetailsPage {
 	public void setAddToCart2(WebElement addToCart2) {
 		this.addToCart2 = addToCart2;
 	}
+
 	@FindBy(xpath = "//div[@class='sing-product-variant']//span[@class='pro-variant-price']")
 	private WebElement productPrice;
 
@@ -213,5 +220,51 @@ public class productDetailsPage {
 	public void setProductPrice(WebElement productPrice) {
 		this.productPrice = productPrice;
 	}
-	
+
+	public String pdpNavigation() throws Exception {
+		lp = new loginPage(driver);
+		hp = new homePage(driver);
+		lp.goToWebsite();
+		hp.getSearchTextField().click();
+		Thread.sleep(2000);
+		hp.getSearchTextField().sendKeys("hair");
+		hp.getSearchButton().click();
+		plp = new productListingPage(driver);
+		String product = "Onion, Black Seed Oil & Patchouli Hair Mask";
+		for (WebElement ele : plp.getProductLinksSearchPLP()) {
+			if (ele.getText().equalsIgnoreCase(product)) {
+				ele.click();
+				break;
+			}
+		}
+		return product;
+	}
+	public void invalidPincode() {
+		webdriverUtility.scrollToElement(getPincodeTextField());
+		getPincodeTextField().sendKeys("123456");
+		getCheckButton().click();
+		webdriverUtility.scrollToElement(getAddToCartButton());
+	}
+	public void validPincode() {
+		webdriverUtility.scrollToElement(getPincodeTextField());
+		getPincodeTextField().clear();
+		getPincodeTextField().sendKeys("560037");
+		getCheckButton().click();
+		webdriverUtility.scrollToElement(getAddToCartButton());
+	}
+	public String addToCartFromPDP() {
+		String product = getProductTitle().getText();
+		webdriverUtility.scrollToElement(getAddToCartButton());
+		getAddToCartButton().click();
+		return product;
+	}
+	public void increaseQuantityFromPDP() throws InterruptedException {
+		webdriverUtility.scrollToElement(getQuantityPlusButton());
+		getQuantityPlusButton().click();
+	}
+	public void decreaseQuantityFromPDP() throws InterruptedException {
+		webdriverUtility.scrollToElement(getQuantityMinusButton());
+		getQuantityMinusButton().click();
+	}
+
 }

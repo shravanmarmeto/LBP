@@ -2,6 +2,7 @@ package pomScripts;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,11 +12,14 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.github.javafaker.Faker;
+
+import genericUtility.BaseClass;
 import genericUtility.webdriverUtility;
 import net.bytebuddy.asm.MemberSubstitution.FieldValue;
 
-public class homePage {
-	WebDriver driver;
+public class homePage extends BaseClass {
+	// WebDriver driver;
 	WebDriverWait wait;
 
 	public homePage(WebDriver driver) {
@@ -212,6 +216,38 @@ public class homePage {
 		this.accountLink = accountLink;
 	}
 
+	// Announcement bar click
+	public void clickAnnouncementBar() {
+		getAnnouncementBar().click();
+	}
+
+	// Megamenu click actions
+	public void clickMegamenuLink() {
+		getMegamenuShopLink().click();
+		getExploreByIngredientsLink().click();
+		getCurryLeavesBiotinMandarinProduct().click();
+	}
+
+	// megamenu about us link
+	public void clickMegamenuAboutUs() {
+		getMegamenuAboutusLink().click();
+	}
+
+	// megamenu know your ingredients link
+	public void clickMegamenuKnowYourIngredients() {
+		getMegamenuKnowyouringredientsLink().click();
+	}
+
+	// megamenu beauty archives link
+	public void clickMegamenuBeautyArchives() {
+		getMegamenuBeautyArchivesLink().click();
+	}
+
+	// megamenu support link
+	public void clickMegamenuSupport() {
+		getMegamenuSupportLink().click();
+	}
+
 	// Locators
 	By nextBtn = By.cssSelector("button.owl-next");
 	By prevBtn = By.cssSelector("button.owl-prev");
@@ -311,6 +347,11 @@ public class homePage {
 		this.allCollectionTabs = allCollectionTabs;
 	}
 
+	// heron banner redirection action
+	public void clickHeronBannerRedirection() {
+		getActiveBanner().click();
+	}
+
 	// product card section
 	@FindBy(xpath = "//p[@class='h-pro-card-cnt-description']")
 	private List<WebElement> productCardDescriptions;
@@ -321,6 +362,30 @@ public class homePage {
 
 	public void setProductCardDescriptions(List<WebElement> productCardDescriptions) {
 		this.productCardDescriptions = productCardDescriptions;
+	}
+
+	// tab section redirection action
+	public void clickTabAndRedirect(int a) {
+		webdriverUtility.scrollToElement(getCombosTab());
+		getAllCollectionTabs().get(a).click();
+		webdriverUtility.scrollToElement(getViewAllLink().get(a));
+		webdriverUtility.elementToBeClickable(driver, getViewAllLink().get(a));
+		getViewAllLink().get(a).click();
+	}
+
+	// Add a product to cart from tab section
+	public String addToCart() throws Exception {
+		driver.navigate().refresh();
+		// Get first product title
+		String pro1 = getProductCardDescriptions().get(0).getText();
+		webdriverUtility.scrollToElement(getProductCardDescriptions().get(0));
+		webdriverUtility.scrollToElement(getAddToCart().get(0));
+		// Click first product add to cart
+		getAddToCart().get(0).click();
+		webdriverUtility.waitUntilElementIsVisible(getViewCartButton());
+		getViewCartButton().click();
+		Thread.sleep(3000);
+		return pro1;
 	}
 
 	// shop by concern section
@@ -430,6 +495,12 @@ public class homePage {
 		this.discoverBeautyBillSection = discoverBeautyBillSection;
 	}
 
+	// beauty bill section action method
+	public void clickDiscoverBeautyBill() {
+		webdriverUtility.scrollToElement(getDiscoverBeautyBillSection());
+		getDiscoverBeautyBillSection().click();
+	}
+
 	// in the spotlight section
 	@FindBy(xpath = "//h2[text()='what sets us apart']")
 	private WebElement whatSetsUsApartSection;
@@ -503,6 +574,26 @@ public class homePage {
 		}
 	}
 
+	// click add to cart in spotlight section
+	public String clickAddToCartInSpotlight() {
+		webdriverUtility.scrollToElement(getWhatSetsUsApartSection());
+		// Right 3 times
+		int n = 3;
+		clickRightMultipleTimes(n);
+
+		// Left 2 times
+
+		clickLeftMultipleTimes(n - 1);
+		webdriverUtility.waitUntilElementIsVisible(getActiveSlideProductName());
+		String activeProduct = getActiveSlideProductName().getText();
+
+		// Click Add to Cart
+		getAddToCartButton().click();
+		webdriverUtility.waitUntilElementIsVisible(getViewCartButton());
+		getViewCartButton().click();
+		return activeProduct;
+	}
+
 	// what sets us apart section
 	@FindBy(xpath = "//h2[text()='what sets us apart']//parent::div")
 	private WebElement whatSetsUsApartSectionContainer;
@@ -547,6 +638,12 @@ public class homePage {
 		this.reelsSectionHeading = reelsSectionHeading;
 	}
 
+	//what sets us apart dropdown actions
+	public void whatsetsUsapart(int a) {
+		webdriverUtility.scrollToElement(getWhatSetsUsApartCards().get(a));
+		getWhatSetsUsApartCards().get(a).click();
+	}
+	
 //customer love section + gif section
 	@FindBy(xpath = "//h2[text()='Customer Love']")
 	private WebElement customerLoveSectionHeading;
@@ -623,6 +720,13 @@ public class homePage {
 		this.discoverOurStorySection2 = discoverOurStorySection2;
 	}
 
+//discover our story section action method
+	public void clickDiscoverOurStory() {
+		webdriverUtility.scrollToElement(getDiscoverOurStorySection());
+		webdriverUtility.waitUntilElementIsVisible(getDiscoverOurStorySection());
+		getDiscoverOurStorySection().click();
+	}
+
 	// beauty archives section
 	@FindBy(xpath = "//a[@class='home-page--blogs-button home-common-btn']")
 	private WebElement beautyArchivesViewAllLink;
@@ -653,6 +757,12 @@ public class homePage {
 
 	public void setBlogHeading(WebElement blogHeading) {
 		this.blogHeading = blogHeading;
+	}
+
+	// beauty archives section action method
+	public void clickBeautyArchivesViewAll() {
+		webdriverUtility.scrollToElement(getBeautyArchiveNextBtn());
+		getBeautyArchivesViewAllLink().click();
 	}
 
 	@FindBy(xpath = "//section[@class='home-page--custom-blogs home-beautyedits']//button[@class='owl-next']")
@@ -735,6 +845,16 @@ public class homePage {
 		this.newsletterEmailTextField = newsletterEmailTextField;
 	}
 
+	// newsletter subscription action method
+	public void subscribeToNewsletter() {
+		webdriverUtility.scrollToElement(getProductLinksFooterHeading());
+		Faker faker = new Faker();
+		getNewsletterEmailTextField().sendKeys(faker.internet().emailAddress());
+		getNewsletterCheckbox().click();
+		getNewsletterSubscribeButton().click();
+		webdriverUtility.waitUntilElementIsVisible(getNewsletterSuccessMessage());
+	}
+
 	// footer links
 	@FindBy(xpath = "//p[text()='Product Links']")
 	private WebElement productLinksFooterHeading;
@@ -746,8 +866,8 @@ public class homePage {
 	public void setProductLinksFooterHeading(WebElement productLinksFooterHeading) {
 		this.productLinksFooterHeading = productLinksFooterHeading;
 	}
-	
-	//footer links
+
+	// footer links
 	@FindBy(xpath = "//p[text()='Product Links']/parent::div//a")
 	private List<WebElement> productLinksFooter;
 	@FindBy(xpath = "//p[text()='Concerns']/parent::div//a")
@@ -798,7 +918,7 @@ public class homePage {
 	public void setCautionNotice(WebElement cautionNotice) {
 		this.cautionNotice = cautionNotice;
 	}
-	
+
 	@FindBy(xpath = "copyright__content")
 	private WebElement copyrightNotice;
 
@@ -809,6 +929,7 @@ public class homePage {
 	public void setCopyrightNotice(WebElement copyrightNotice) {
 		this.copyrightNotice = copyrightNotice;
 	}
+
 	@FindBy(xpath = "(//div[@class='be_beautiful__container'])[2]")
 	private WebElement beBeautifulSection;
 
@@ -819,7 +940,9 @@ public class homePage {
 	public void setBeBeautifulSection(WebElement beBeautifulSection) {
 		this.beBeautifulSection = beBeautifulSection;
 	}
-	//social media links
+
+
+	// social media links
 	@FindBy(xpath = "(//a[@href='https://www.facebook.com/lovebeautyandplanetin'])[2]")
 	private WebElement facebookLink;
 	@FindBy(xpath = "(//img[@class='icon-insta'])[2]")
@@ -850,7 +973,7 @@ public class homePage {
 	public void setYoutubeLink(WebElement youtubeLink) {
 		this.youtubeLink = youtubeLink;
 	}
-	
+
 	@FindBy(xpath = "//li[@class='list-social__item']")
 	private List<WebElement> socialMediaLinks;
 
@@ -861,6 +984,7 @@ public class homePage {
 	public void setSocialMediaLinks(List<WebElement> socialMediaLinks) {
 		this.socialMediaLinks = socialMediaLinks;
 	}
+
 	@FindBy(xpath = "(//input[@type='search']/following-sibling::button[@type='submit'])[2]")
 	private WebElement searchButton;
 
@@ -872,4 +996,45 @@ public class homePage {
 		this.searchButton = searchButton;
 	}
 	
+	public String clickfacebook() {
+		webdriverUtility.scrollToElement(getFacebookLink());
+		getFacebookLink().click();
+		Set<String> windows = driver.getWindowHandles();
+		String parent = driver.getWindowHandle();
+		for (String window : windows) {
+			if (!window.equals(parent)) {
+				driver.switchTo().window(window);
+				break;
+			}
+		}
+		return parent;
+	}
+	public String clickinstagram() {
+		webdriverUtility.scrollToElement(getInstagramLink());
+		getInstagramLink().click();
+		Set<String> windows1 = driver.getWindowHandles();
+		String parent1 = driver.getWindowHandle();
+		for (String window : windows1) {
+			if (!window.equals(parent1)) {
+				driver.switchTo().window(window);
+				break;
+			}
+		}
+		return parent1;
+		
+	}
+	public String clickyoutube() {
+		webdriverUtility.scrollToElement(getYoutubeLink());
+		getYoutubeLink().click();
+		Set<String> windows2 = driver.getWindowHandles();
+		String parent2 = driver.getWindowHandle();
+		for (String window : windows2) {
+			if (!window.equals(parent2)) {
+				driver.switchTo().window(window);
+				break;
+			}
+		}
+		return parent2;
+	}
+
 }

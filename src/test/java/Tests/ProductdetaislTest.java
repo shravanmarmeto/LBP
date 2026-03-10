@@ -22,23 +22,9 @@ public class ProductdetaislTest extends BaseClass {
 	// Case 1: Verify if user is able to navigate to PDP by clicking on product in
 	// search PLP page
 	@Test(priority = 1)
-	public void hpToPlpNavigation() throws InterruptedException {
-		lp = new loginPage(driver);
-		hp = new homePage(driver);
-		lp.goToWebsite();
-		hp.getSearchTextField().click();
-		Thread.sleep(2000);
-		hp.getSearchTextField().sendKeys("hair");
-		hp.getSearchButton().click();
-		plp = new productListingPage(driver);
-		String product = "Onion, Black Seed Oil & Patchouli Hair Mask";
-		for (WebElement ele : plp.getProductLinksSearchPLP()) {
-			if (ele.getText().equalsIgnoreCase(product)) {
-				ele.click();
-				break;
-			}
-		}
+	public void hpToPdpNavigation() throws Exception {
 		pdp = new productDetailsPage(driver);
+		String product=pdp.pdpNavigation();
 		String productActual = pdp.getProductTitle().getText();
 		Assert.assertEquals(productActual.toLowerCase(), product.toLowerCase());
 
@@ -67,10 +53,7 @@ public class ProductdetaislTest extends BaseClass {
 	@Test(priority = 3)
 	public void invalidPincodeCheck() throws InterruptedException {
 		pdp = new productDetailsPage(driver);
-		webdriverUtility.scrollToElement(pdp.getPincodeTextField());
-		pdp.getPincodeTextField().sendKeys("123456");
-		pdp.getCheckButton().click();
-		webdriverUtility.scrollToElement(pdp.getAddToCartButton());
+		pdp.invalidPincode();
 		String expectedErrorMessage = "Please enter a valid pincode";
 		String actualErrorMessage = pdp.getInvalidPincodeErrorMessage().getText();
 		Assert.assertEquals(actualErrorMessage, expectedErrorMessage);
@@ -81,11 +64,7 @@ public class ProductdetaislTest extends BaseClass {
 	@Test(priority = 4)
 	public void validPincodeCheck() throws InterruptedException {
 		pdp = new productDetailsPage(driver);
-		webdriverUtility.scrollToElement(pdp.getPincodeTextField());
-		pdp.getPincodeTextField().clear();
-		pdp.getPincodeTextField().sendKeys("560037");
-		pdp.getCheckButton().click();
-		webdriverUtility.scrollToElement(pdp.getAddToCartButton());
+		pdp.validPincode();
 		boolean actualMessage = pdp.getValidPincodeErrorMessage().isDisplayed();
 		Assert.assertTrue(actualMessage);
 	}
@@ -94,9 +73,7 @@ public class ProductdetaislTest extends BaseClass {
 	@Test(priority = 5)
 	public void addToCartFromPDP() throws InterruptedException {
 		pdp = new productDetailsPage(driver);
-		String product = pdp.getProductTitle().getText();
-		webdriverUtility.scrollToElement(pdp.getAddToCartButton());
-		pdp.getAddToCartButton().click();
+		String product=pdp.addToCartFromPDP();
 		cartDrawer c = new cartDrawer(driver);
 		webdriverUtility.waitUntilElementIsVisible(c.getCheckoutButtonCartDrawer());
 		String cartPro = c.getProductTitleCartDrawer().getText();
@@ -107,34 +84,27 @@ public class ProductdetaislTest extends BaseClass {
 
 	// Case 6: Verify if user is able to increase quantity from PDP page
 	@Test(priority = 6)
-	public void quantityIncrease() throws InterruptedException {
+	public void quantityIncrease() throws Exception {
 		pdp = new productDetailsPage(driver);
-		webdriverUtility.scrollToElement(pdp.getQuantityPlusButton());
-		pdp.getQuantityPlusButton().click();
+		pdp.increaseQuantityFromPDP();
 		cartDrawer c = new cartDrawer(driver);
-		webdriverUtility.waitUntilElementIsVisible(c.getCartDrawer());
-		webdriverUtility.waitUntilElementIsVisible(c.getQuantityTextFieldCartDrawer());
-		Thread.sleep(2000);
+		c.increaseQuantityFromCartDrawer();
 		String cartQuantity = c.getQuantityTextFieldCartDrawer().getAttribute("value");
 		c.getCloseCartDrawerButton().click();
 		String quantity = pdp.getQuantityTextField().getAttribute("data-cart-quantity");
-		
 		Assert.assertEquals(quantity, cartQuantity, "Quantity in cart drawer is not same as the one selected in PDP");
 	}
 	// Case 7: Verify if user is able to decrease quantity from PDP page
 		@Test(priority = 7, dependsOnMethods = {"quantityIncrease"})
-		public void quantityDecrease() throws InterruptedException {
+		public void quantityDecrease() throws Exception {
 			Thread.sleep(2000);
 			pdp = new productDetailsPage(driver);
-			webdriverUtility.scrollToElement(pdp.getQuantityMinusButton());
-			pdp.getQuantityMinusButton().click();
 			cartDrawer c = new cartDrawer(driver);
-			webdriverUtility.waitUntilElementIsVisible(c.getCartDrawer());
-			webdriverUtility.waitUntilElementIsVisible(c.getQuantityTextFieldCartDrawer());
+			pdp.decreaseQuantityFromPDP();
+			c.decreaseQuantityFromCartDrawer();
 			String cartQuantity = c.getQuantityTextFieldCartDrawer().getAttribute("value");
 			c.getCloseCartDrawerButton().click();
 			String quantity = pdp.getQuantityTextField().getAttribute("data-cart-quantity");
-			
 			Assert.assertEquals(quantity, cartQuantity, "Quantity in cart drawer is not same as the one selected in PDP");
 		}
 		

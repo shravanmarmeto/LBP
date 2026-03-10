@@ -23,11 +23,19 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
+import pomScripts.cartDrawer;
+import pomScripts.homePage;
 import pomScripts.loginPage;
+import pomScripts.productDetailsPage;
+import pomScripts.productListingPage;
 
 public class BaseClass {
 	public WebDriver driver;
 	public loginPage lp;
+	public homePage hp;
+	public productListingPage plp;
+	public productDetailsPage pdp;
+	public cartDrawer cd;
 
 	public WebDriver initializeDriver() throws IOException {
 		Properties p = new Properties();

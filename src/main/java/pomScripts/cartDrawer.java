@@ -8,10 +8,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import genericUtility.BaseClass;
 import genericUtility.webdriverUtility;
 import net.bytebuddy.asm.MemberSubstitution.FieldValue;
 
-public class cartDrawer {
+public class cartDrawer  extends BaseClass{
 	WebDriver driver;
 	WebDriverWait wait;
 
@@ -174,6 +175,16 @@ public class cartDrawer {
 
 	public void setScroll(WebElement scroll) {
 		this.scroll = scroll;
+	}
+	
+	public void increaseQuantityFromCartDrawer() throws Exception {
+		webdriverUtility.waitUntilElementIsVisible(getCartDrawer());
+		webdriverUtility.waitUntilElementIsVisible(getQuantityTextFieldCartDrawer());
+		Thread.sleep(2000);
+	}
+	public void decreaseQuantityFromCartDrawer() throws Exception {
+		webdriverUtility.waitUntilElementIsVisible(getCartDrawer());
+		webdriverUtility.waitUntilElementIsVisible(getQuantityTextFieldCartDrawer());
 	}
 	
 	
